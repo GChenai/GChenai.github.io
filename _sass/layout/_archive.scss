@@ -84,6 +84,78 @@
   }
 }
 
+.list__item.publication-list__item {
+  margin-bottom: 1.75em;
+  padding-right: 0;
+}
+
+.publication-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.publication-card__teaser {
+  flex: 0 0 200px;
+  width: 200px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--global-border-color);
+  background: var(--global-bg-color);
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.publication-card__content {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.publication-card__title {
+  margin: 0 0 0.15em;
+  font-size: $type-size-5;
+  line-height: 1.25;
+}
+
+.publication-card__venue,
+.publication-card__authors,
+.publication-card__excerpt,
+.publication-card__links {
+  margin: 0 0 0.25em;
+}
+
+.publication-card__authors {
+  font-size: $type-size-6;
+  color: var(--global-text-color-light);
+}
+
+.publication-card__links {
+  font-size: $type-size-6;
+
+  a + a::before {
+    content: "|";
+    display: inline-block;
+    margin: 0 0.4em;
+    color: var(--global-text-color-light);
+  }
+}
+
+@media (max-width: 600px) {
+  .publication-card {
+    flex-direction: column;
+  }
+
+  .publication-card__teaser {
+    flex-basis: auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 
 /*
    List view

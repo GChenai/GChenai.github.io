@@ -6,23 +6,63 @@
   {% assign teaser = site.teaser %}
 {% endif %}
 
+{% if teaser contains "://" %}
+  {% assign teaser_path = teaser %}
+{% else %}
+  {% assign teaser_path = teaser | prepend: "/images/" | prepend: base_path %}
+{% endif %}
+
 {% if post.id %}
   {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
 {% else %}
   {% assign title = post.title %}
 {% endif %}
 
+{% if post.collection == 'publications' %}
+<div class="{{ include.type | default: "list" }}__item publication-list__item">
+  <article class="archive__item publication-card" itemscope itemtype="http://schema.org/CreativeWork">
+    {% if teaser %}
+      <div class="publication-card__teaser">
+        <a href="{{ base_path }}{{ post.url }}" rel="permalink">
+          <img src="{{ teaser_path }}" alt="{{ title }}">
+        </a>
+      </div>
+    {% endif %}
+
+    <div class="publication-card__content">
+      <h2 class="archive__item-title publication-card__title" itemprop="headline">
+        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+      </h2>
+
+      {% if post.venue %}
+        <p class="publication-card__venue"><i>{{ post.venue }}</i>{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}</p>
+      {% endif %}
+
+      {% if post.authors %}
+        <p class="publication-card__authors">{{ post.authors | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+      {% endif %}
+
+      {% if post.excerpt %}
+        <p class="archive__item-excerpt publication-card__excerpt" itemprop="description">{{ post.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+      {% endif %}
+
+      {% if post.paperurl or post.doiurl or post.projecturl or post.codeurl %}
+        <p class="publication-card__links">
+          {% if post.paperurl %}<a href="{{ post.paperurl }}">Paper</a>{% endif %}
+          {% if post.doiurl %}<a href="{{ post.doiurl }}">DOI</a>{% endif %}
+          {% if post.projecturl %}<a href="{{ post.projecturl }}">Project Page</a>{% endif %}
+          {% if post.codeurl %}<a href="{{ post.codeurl }}">Code</a>{% endif %}
+        </p>
+      {% endif %}
+    </div>
+  </article>
+</div>
+{% else %}
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
-        <img src=
-          {% if teaser contains "://" %}
-            "{{ teaser }}"
-          {% else %}
-            "{{ teaser | prepend: "/images/" | prepend: base_path }}"
-          {% endif %}
-          alt="">
+        <img src="{{ teaser_path }}" alt="">
       </div>
     {% endif %}
 
@@ -82,3 +122,4 @@
 
   </article>
 </div>
+{% endif %}
