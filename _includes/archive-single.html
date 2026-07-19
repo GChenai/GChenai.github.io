@@ -42,14 +42,9 @@
         <p class="publication-card__authors">{{ post.authors | markdownify | remove: "<p>" | remove: "</p>" }}</p>
       {% endif %}
 
-      {% if post.excerpt %}
-        <p class="archive__item-excerpt publication-card__excerpt" itemprop="description">{{ post.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
-      {% endif %}
-
       {% if post.paperurl or post.doiurl or post.projecturl or post.codeurl %}
         <p class="publication-card__links">
-          {% if post.paperurl %}<a href="{{ post.paperurl }}">Paper</a>{% endif %}
-          {% if post.doiurl %}<a href="{{ post.doiurl }}">DOI</a>{% endif %}
+          {% if post.paperurl %}<a href="{{ post.paperurl }}">Paper</a>{% elsif post.doiurl %}<a href="{{ post.doiurl }}">Paper</a>{% endif %}
           {% if post.projecturl %}<a href="{{ post.projecturl }}">Project Page</a>{% endif %}
           {% if post.codeurl %}<a href="{{ post.codeurl }}">Code</a>{% endif %}
         </p>

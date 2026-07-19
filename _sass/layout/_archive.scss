@@ -85,14 +85,14 @@
 }
 
 .list__item.publication-list__item {
-  margin-bottom: 1.75em;
+  margin-bottom: 1.35em;
   padding-right: 0;
 }
 
 .publication-card {
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 20px;
 }
 
 .publication-card__teaser {
@@ -100,13 +100,13 @@
   width: 200px;
   border-radius: 4px;
   overflow: hidden;
-  border: 1px solid var(--global-border-color);
-  background: var(--global-bg-color);
+  background: transparent;
 
   img {
     display: block;
     width: 100%;
     height: auto;
+    border-radius: 4px;
   }
 }
 
@@ -116,24 +116,24 @@
 }
 
 .publication-card__title {
-  margin: 0 0 0.15em;
+  margin: 0;
   font-size: $type-size-5;
-  line-height: 1.25;
+  line-height: 1.2;
 }
 
 .publication-card__venue,
 .publication-card__authors,
-.publication-card__excerpt,
 .publication-card__links {
-  margin: 0 0 0.25em;
+  margin: 0;
 }
 
 .publication-card__authors {
   font-size: $type-size-6;
-  color: var(--global-text-color-light);
+  color: var(--global-text-color);
 }
 
 .publication-card__links {
+  margin-top: 0.15em;
   font-size: $type-size-6;
 
   a + a::before {

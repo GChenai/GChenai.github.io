@@ -10,7 +10,7 @@ redirect_from:
 
 I am a Ph.D. student and research assistant at **Zhejiang University**, advised by Prof. [Pengcheng Nie](https://person.zju.edu.cn/npc). My research focuses on **Smart Agriculture**, especially agricultural computer vision and multispectral image analysis for crop monitoring and phenotyping. My recent work explores tomato fruit detection and phenotype calculation with improved transformer-based detectors, as well as lightweight drought recognition from soybean multispectral images.
 
-**Email:** [12613083@zju.edu.cn](mailto:12613083@zju.edu.cn)
+**Email:** [GChen@zju.edu.cn](mailto:GChen@zju.edu.cn)
 
 News
 ======
