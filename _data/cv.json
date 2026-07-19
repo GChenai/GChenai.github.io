@@ -1,0 +1,94 @@
+{
+  "basics": {
+    "name": "GChen",
+    "email": "12613083@zju.edu.cn",
+    "phone": "",
+    "website": "https://gchenai.github.io",
+    "summary": "Zhejiang University. Research direction: Smart Agriculture.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Hangzhou",
+      "countryCode": "CN",
+      "region": "Zhejiang"
+    },
+    "profiles": [
+      {
+        "network": "Google Scholar",
+        "username": "",
+        "url": "https://scholar.google.com/citations?hl=zh-CN&user=TjUkbNkAAAAJ"
+      },
+      {
+        "network": "ORCID",
+        "username": "0009-0008-8162-6625",
+        "url": "https://orcid.org/0009-0008-8162-6625"
+      },
+      {
+        "network": "GitHub",
+        "username": "GChenai",
+        "url": "https://github.com/GChenai"
+      },
+      {
+        "network": "Bilibili",
+        "username": "",
+        "url": "https://b23.tv/ZUxewca"
+      }
+    ]
+  },
+  "work": [],
+  "education": [
+    {
+      "institution": "Zhejiang University",
+      "area": "Smart Agriculture",
+      "studyType": "",
+      "startDate": "",
+      "endDate": "",
+      "gpa": null,
+      "courses": []
+    }
+  ],
+  "skills": [
+    {
+      "name": "Smart Agriculture",
+      "level": "",
+      "keywords": [
+        "Agricultural computer vision",
+        "Crop phenotyping",
+        "Multispectral image analysis",
+        "Lightweight recognition models"
+      ]
+    }
+  ],
+  "languages": [],
+  "interests": [
+    {
+      "name": "Smart Agriculture",
+      "keywords": [
+        "Tomato fruit detection",
+        "Drought recognition",
+        "Phenotype calculation"
+      ]
+    }
+  ],
+  "references": [],
+  "publications": [
+    {
+      "name": "Tomato fruit detection and phenotype calculation method based on the improved RTDETR model",
+      "publisher": "Computers and Electronics in Agriculture",
+      "releaseDate": "2024",
+      "website": "",
+      "summary": "Gu Z, Ma X, Guan H, et al. Computers and Electronics in Agriculture, 2024, 227: 109524."
+    },
+    {
+      "name": "Lightweight drought recognition model based on feature extraction of soybean multispectral images",
+      "publisher": "Chemometrics and Intelligent Laboratory Systems",
+      "releaseDate": "2025",
+      "website": "",
+      "summary": "Ma X, Gu Z, Zhang T, et al. Chemometrics and Intelligent Laboratory Systems, 2025: 105488."
+    }
+  ],
+  "presentations": [],
+  "teaching": [],
+  "portfolio": []
+}
+
