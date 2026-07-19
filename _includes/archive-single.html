@@ -34,7 +34,9 @@
         <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
       </h2>
 
-      {% if post.venue %}
+      {% if post.status %}
+        <p class="publication-card__venue">{{ post.status }}{% if post.venue %} for <i>{{ post.venue }}</i>{% endif %}{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}</p>
+      {% elsif post.venue %}
         <p class="publication-card__venue"><i>{{ post.venue }}</i>{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}</p>
       {% endif %}
 
