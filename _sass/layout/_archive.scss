@@ -123,6 +123,7 @@
 
 .publication-card__venue,
 .publication-card__authors,
+.publication-card__badges,
 .publication-card__links {
   margin: 0;
 }
@@ -141,6 +142,23 @@
     display: inline-block;
     margin: 0 0.4em;
     color: var(--global-text-color-light);
+  }
+}
+
+.publication-card__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35em;
+  margin-top: 0.2em;
+  font-size: 0.72rem;
+
+  span {
+    display: inline-block;
+    padding: 0.08em 0.45em;
+    border: 1px solid var(--global-border-color);
+    border-radius: 4px;
+    color: var(--global-text-color);
+    background: var(--global-code-background-color);
   }
 }
 

@@ -44,6 +44,13 @@
         <p class="publication-card__authors">{{ post.authors | markdownify | remove: "<p>" | remove: "</p>" }}</p>
       {% endif %}
 
+      {% if post.jcr_quartile or post.citation_count %}
+        <p class="publication-card__badges">
+          {% if post.jcr_quartile %}<span>{{ post.jcr_quartile }}</span>{% endif %}
+          {% if post.citation_count %}<span>{{ post.citation_count }} citations{% if post.citation_source %} · {{ post.citation_source }}{% endif %}</span>{% endif %}
+        </p>
+      {% endif %}
+
       {% if post.paperurl or post.doiurl or post.projecturl or post.codeurl %}
         <p class="publication-card__links">
           {% if post.paperurl %}<a href="{{ post.paperurl }}">Paper</a>{% elsif post.doiurl %}<a href="{{ post.doiurl }}">Paper</a>{% endif %}
