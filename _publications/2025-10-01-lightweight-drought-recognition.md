@@ -7,6 +7,7 @@ excerpt: "A lightweight drought recognition model using feature extraction from 
 date: 2025-10-01
 venue: "Chemometrics and Intelligent Laboratory Systems"
 authors: "Xiaodan Ma, **Zhicheng Gu**, Tao Zhang, Haiou Guan"
+jcr_quartile: "JCR Q1"
 doi: "10.1016/j.chemolab.2025.105488"
 doiurl: "https://doi.org/10.1016/j.chemolab.2025.105488"
 header:
@@ -17,4 +18,3 @@ citation: "Ma X, Gu Z, Zhang T, et al. (2025). &quot;Lightweight drought recogni
 This article presents a lightweight drought recognition model based on feature extraction of soybean multispectral images.
 
 [DOI: 10.1016/j.chemolab.2025.105488](https://doi.org/10.1016/j.chemolab.2025.105488)
-
